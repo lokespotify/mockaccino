@@ -114,7 +114,7 @@ class Expectation(object):
         return self
 
     def will_raise(self, error):
-        if not error or not isinstance(error, Exception):
+        if not error or not issubclass(error, Exception):
             raise ValueError("Error paramenter should be an Exception or " +
                              "a subclass of it")
 
